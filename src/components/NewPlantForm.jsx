@@ -5,26 +5,36 @@ function NewPlantForm(props) {
     <div>
       <h2>Add A Plant</h2>
       <form>
+        <label>Common Name: </label>
         <input
           type="text"
           id="name"
-          placeholder="e.g. Venus Fly Trap"/>
+          placeholder="Venus Fly Trap"/>
+        <br/>
+        <label>Image URL: </label>
         <input
           type="text"
           id="image"
           placeholder="Image URL"/>
+        <br/>
+        <label>Species/Botanical Name: </label>
         <input
           type="text"
           id="species"
-          placeholder="e.g. Paeonia Lactiflora"/>
+          placeholder="Paeonia Lactiflora"/>
+        <br/>
+        <label>Category: </label>
         <input
           type="text"
           id="category"
-          placeholder="e.g. flowering plant"/>
+          placeholder="flowering plant"/>
+        <br/>
+        <label>Frequency (Days Between Watering): </label>
         <input
           type="number"
           id="frequency"
-          placeholder="Days between watering—e.g. 1, 3, 7"/>
+          placeholder="1, 3, 7, etc."/>
+        <br/>
         <button type="submit">Add Plant</button>
       </form>
     </div>
