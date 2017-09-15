@@ -11,6 +11,7 @@ class Buddy extends React.Component {
       masterPlantList: []
     };
     this.addPlant = this.addPlant.bind(this);
+    this.updateTimeSinceWatered = this.updateTimeSinceWatered.bind(this);
   }
 
   componentDidMount() {
@@ -22,6 +23,14 @@ class Buddy extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this.timeSinceWateredChecker);
+  }
+
+  updateTimeSinceWatered() {
+    console.log("check");
+    let newMasterPlantList = this.state.masterPlantList.slice();
+    newMasterPlantList.forEach((plant) => plant.setTimeSinceWatered()
+    );
+    this.setState({masterPlantList: newMasterPlantList})
   }
 
   addPlant(newPlant) {
