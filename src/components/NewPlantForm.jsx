@@ -6,6 +6,13 @@ class NewPlantForm extends React.Component {
     super(props);
   }
 
+  submitForm(event) {
+    event.preventDefault();
+    const { _name, _image, _species, _category, _frequency } = this.refs;
+    var newPlant = new Plant(_name.value, _image.value, _species.value, _category.value, _frequency.value);
+    this.props.createPlant(newPlant);
+  }
+
   render() {
     return (
       <div>
