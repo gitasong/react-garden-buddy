@@ -13,6 +13,13 @@ class Buddy extends React.Component {
     this.addPlant = this.addPlant.bind(this);
   }
 
+  componentDidMount() {
+    this.timeSinceAddedChecker = setInterval(() =>
+      this.updateTimeSinceWatered(),
+      5000
+    );
+  }
+
   addPlant(newPlant) {
     var newMasterPlantList = this.state.masterPlantList.slice();
     newMasterPlantList.push(newPlant);
