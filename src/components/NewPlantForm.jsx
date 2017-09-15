@@ -12,8 +12,7 @@ class NewPlantForm extends React.Component {
     event.preventDefault();
     const { _name, _image, _species, _category, _frequency } = this.refs;
     var newPlant = new Plant(_name.value, _image.value, _species.value, _category.value, _frequency.value);
-    this.props.createPlant(newPlant);
-    console.log(newPlant);
+    this.props.addPlant(newPlant);
   }
 
   render() {
@@ -65,7 +64,7 @@ class NewPlantForm extends React.Component {
 
 NewPlantForm.propTypes = {
   submitForm: PropTypes.func,
-  createPlant: PropTypes.func
+  addPlant: PropTypes.func
 }
 
 export default NewPlantForm;

@@ -22,7 +22,7 @@ class Buddy extends React.Component {
   render() {
     return (
       <div>
-        <NewPlantForm createPlant={this.props.addPlant}/>
+        <NewPlantForm addPlant={this.addPlant}/>
         <PlantList masterPlantList={this.state.masterPlantList}/>
       </div>
     );
@@ -30,7 +30,7 @@ class Buddy extends React.Component {
 }
 
 Buddy.propTypes = {
-  createPlant: PropTypes.func
+  addPlant: PropTypes.func
 };
 
 export default Buddy;
