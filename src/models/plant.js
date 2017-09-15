@@ -1,6 +1,7 @@
 class Plant {
-  constructor(name, species, category, frequency) {
+  constructor(name, image, species, category, frequency) {
     this.name = name;
+    this.image = image;
     this.species = species;
     this.category = category;
     this.frequency = frequency;
