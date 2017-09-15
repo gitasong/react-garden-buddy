@@ -8,6 +8,7 @@ class Plant {
     this.category = category;
     this.frequency = frequency;
     this.timeAdded = new Moment();
+    this.timeAddedFormatted = new Moment().format("MMM Do YYYY");
     this.timeSinceWatered = "a few seconds";
   }
 
