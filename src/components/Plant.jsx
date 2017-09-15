@@ -22,6 +22,7 @@ Plant.propTypes = {
   species: PropTypes.string.isRequired,
   category: PropTypes.string,
   frequency: PropTypes.number.isRequired,
+  timeAdded: PropTypes.sting,
   timeSinceWatered: PropTypes.number,
 };
 
