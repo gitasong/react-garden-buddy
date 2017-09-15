@@ -1,9 +1,10 @@
 import React from "react";
+import PlantList from "./PlantList";
 
 function App(props){
   return (
     <div>
-      <h1>Garden Buddy</h1>
+      <PlantList/>
     </div>
   );
 }
