@@ -10,10 +10,10 @@ class Plant {
     this.timeAdded = new Moment();
     this.timeSinceWatered = "a few seconds";
   }
-}
 
-setTimeSinceWatered() {
-  this.timeSinceWatered = this.timeAdded.fromNow(true);
+  setTimeSinceWatered() {
+    this.timeSinceWatered = this.timeAdded.fromNow(true);
+  }
 }
 
 export default Plant;
