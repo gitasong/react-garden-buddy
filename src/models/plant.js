@@ -5,6 +5,8 @@ class Plant {
     this.species = species;
     this.category = category;
     this.frequency = frequency;
+    this.timeAdded = new Moment();
+    this.timeSinceWatered = "a few seconds";
   }
 }
 
