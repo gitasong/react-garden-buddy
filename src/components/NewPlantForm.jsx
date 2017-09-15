@@ -1,4 +1,5 @@
 import React from "react";
+import Plant from "../models/Plant.js";
 import PropTypes from "prop-types";
 
 class NewPlantForm extends React.Component {
