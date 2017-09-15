@@ -1,3 +1,5 @@
+import Moment from "moment";
+
 class Plant {
   constructor(name, image, species, category, frequency) {
     this.name = name;
