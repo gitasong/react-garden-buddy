@@ -14,10 +14,14 @@ class Buddy extends React.Component {
   }
 
   componentDidMount() {
-    this.timeSinceAddedChecker = setInterval(() =>
+    this.timeSinceWateredChecker = setInterval(() =>
       this.updateTimeSinceWatered(),
-      5000
+      60000
     );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timeSinceWateredChecker);
   }
 
   addPlant(newPlant) {
