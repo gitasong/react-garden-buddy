@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import PlantList from "./PlantList";
+import Buddy from "./Buddy";
 
 function App(props){
   return (
     <div>
       <Header/>
-      <PlantList/>
+      <Buddy/>
     </div>
   );
 }
