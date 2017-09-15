@@ -43,6 +43,7 @@ function PlantList(props){
         species={plant.species}
         category={plant.category}
         frequency={plant.frequency}
+        timeAddedFormatted={plant.timeAddedFormatted}
         timeSinceWatered={plant.timeSinceWatered}
         key={index}/>
       )}
