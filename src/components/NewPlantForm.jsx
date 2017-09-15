@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class NewPlantForm extends React.Component {
 
@@ -58,6 +59,10 @@ class NewPlantForm extends React.Component {
       </div>
     );
   }
+}
+
+NewPlantForm.propTypes = {
+  createPlant: PropTypes.func
 }
 
 export default NewPlantForm;
