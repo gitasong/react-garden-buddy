@@ -10,6 +10,7 @@ class Buddy extends React.Component {
     this.state = {
       masterPlantList: []
     };
+    this.addPlant = this.addPlant.bind(this);
   }
 
   addPlant(newPlant) {
