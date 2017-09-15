@@ -12,6 +12,12 @@ class Buddy extends React.Component {
     };
   }
 
+  addPlant(newPlant) {
+    var newMasterPlantList = this.state.masterPlantList.slice();
+    newMasterPlantList.push(newPlant);
+    this.setState({masterPlantList: newMasterPlantList});
+  }
+
   render() {
     return (
       <div>
