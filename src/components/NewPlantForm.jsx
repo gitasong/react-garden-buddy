@@ -5,6 +5,7 @@ class NewPlantForm extends React.Component {
 
   constructor(props) {
     super(props);
+    this.submitForm = this.submitForm.bind(this);
   }
 
   submitForm(event) {
