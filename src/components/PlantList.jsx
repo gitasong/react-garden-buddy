@@ -44,7 +44,7 @@ function PlantList(props){
         category={plant.category}
         frequency={plant.frequency}
         timeSinceWatered={plant.timeSinceWatered}
-        />
+        key={index}/>
       )}
     </div>
   );
