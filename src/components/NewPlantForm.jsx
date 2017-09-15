@@ -12,14 +12,16 @@ class NewPlantForm extends React.Component {
     event.preventDefault();
     const { _name, _image, _species, _category, _frequency } = this.refs;
     var newPlant = new Plant(_name.value, _image.value, _species.value, _category.value, _frequency.value);
+    console.log(newPlant);
     this.props.addPlant(newPlant);
+    console.log(this.props);
   }
 
   render() {
     return (
       <div>
         <h2>Add A Plant</h2>
-        <form>
+      <form onSubmit={this.submitForm}>
           <label>Common Name: </label>
           <input
             ref="_name"
