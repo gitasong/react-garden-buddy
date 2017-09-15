@@ -12,4 +12,8 @@ class Plant {
   }
 }
 
+setTimeSinceWatered() {
+  this.timeSinceWatered = this.timeAdded.fromNow(true);
+}
+
 export default Plant;
