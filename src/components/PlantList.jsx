@@ -37,7 +37,7 @@ function PlantList(props){
   return (
     <div>
       <hr/>
-    {props.masterPlantList.map((plant, index) =>
+    {masterPlantList.map((plant, index) =>
         <Plant name={plant.name}
         image={plant.image}
         species={plant.species}
