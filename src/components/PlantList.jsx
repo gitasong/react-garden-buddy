@@ -55,6 +55,7 @@ function PlantList(props){
 PlantList.propTypes = {
   masterPlantList: PropTypes.array,
   waterPlant: PropTypes.func,
+  sayHello: PropTypes.func,
 };
 
 export default PlantList;

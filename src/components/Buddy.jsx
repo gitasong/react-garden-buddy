@@ -11,27 +11,42 @@ class Buddy extends React.Component {
       masterPlantList: []
     };
     this.addPlant = this.addPlant.bind(this);
-    this.updateTimeSinceWatered = this.updateTimeSinceWatered.bind(this);
+    this.updateTimeSinceLastWatering = this.updateTimeSinceLastWatering.bind(this);
+    // this.waterPlant = this.waterPlant.bind(this);
+    this.sayHello = this.sayHello.bind(this);
   }
 
   componentDidMount() {
-    this.timeSinceWateredChecker = setInterval(() =>
-      this.updateTimeSinceWatered(),
+    this.timeSinceLastWateringChecker = setInterval(() =>
+      this.updateTimeSinceLastWatering(),
       60000
     );
   }
 
   componentWillUnmount() {
-    clearInterval(this.timeSinceWateredChecker);
+    clearInterval(this.timeSinceLastWateringChecker);
   }
 
-  updateTimeSinceWatered() {
+  sayHello() {
+    console.log("hello");
+  }
+
+  updateTimeSinceLastWatering() {
     console.log("check");
     let newMasterPlantList = this.state.masterPlantList.slice();
-    newMasterPlantList.forEach((plant) => plant.setTimeSinceWatered()
+    newMasterPlantList.forEach((plant) => plant.setTimeSinceLastWatering()
     );
     this.setState({masterPlantList: newMasterPlantList})
   }
+
+  // waterPlant(plantKey) {
+  //   console.log("water plant");
+  //   let newMasterPlantList = this.state.masterPlantList.slice();
+  //   newMasterPlantList[plantKey].setTimeSinceLastWatering;
+  //   console.log(newMasterPlantList[plantKey]);
+  //   console.log(newMasterPlantList.timeSinceLastWatering);
+  //   this.setState({masterPlantList: newMasterPlantList});
+  // }
 
   addPlant(newPlant) {
     var newMasterPlantList = this.state.masterPlantList.slice();
@@ -50,7 +65,9 @@ class Buddy extends React.Component {
 }
 
 Buddy.propTypes = {
-  addPlant: PropTypes.func
+  addPlant: PropTypes.func,
+  waterPlant: PropTypes.func,
+  sayHello: PropTypes.func,
 };
 
 export default Buddy;
