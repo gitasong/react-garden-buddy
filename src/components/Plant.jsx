@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import WaterButton from "./WaterButton";
 
 function Plant(props){
   return (
@@ -10,9 +9,9 @@ function Plant(props){
       <p>Species: <em>{props.species}</em></p>
       <p>Category: {props.category}</p>
       <p>Watering Frequency: Every {props.frequency} days</p>
-      <p>Date/Time Added: {props.timeAddedFormatted}</p>
-      <p><strong>Time Since Last Watered: {props.timeSinceWatered}</strong></p>
-      <WaterButton/>
+      <p>Date Added: {props.timeAddedFormatted}</p>
+      <p><strong>Last Watered: {props.lastWateringFormatted}</strong></p>
+      <p><strong>Time Since Last Watering: {props.timeSinceLastWatering}</strong></p>
     </div>
   );
 }
@@ -25,7 +24,8 @@ Plant.propTypes = {
   category: PropTypes.string,
   frequency: PropTypes.number.isRequired,
   timeAddedFormatted: PropTypes.string,
-  timeSinceWatered: PropTypes.string.isRequired,
+  lastWateringFormatted: PropTypes.string,
+  timeSinceLastWatering: PropTypes.string,
 };
 
 export default Plant;
