@@ -22,7 +22,7 @@ class NewPlantForm extends React.Component {
     return (
       <div>
         <h2>Add A Plant</h2>
-      <form onSubmit={this.submitForm}>
+        <form onSubmit={this.submitForm}>
           <label>Common Name: </label>
           <input
             ref="_name"
