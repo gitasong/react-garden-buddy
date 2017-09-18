@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import WaterButton from "./WaterButton";
 
 function Plant(props){
   return (
@@ -12,6 +13,7 @@ function Plant(props){
       <p>Date Added: {props.timeAddedFormatted}</p>
       <p><strong>Last Watered: {props.lastWateringFormatted}</strong></p>
       <p><strong>Time Since Last Watering: {props.timeSinceLastWatering}</strong></p>
+      <WaterButton/>
     </div>
   );
 }
