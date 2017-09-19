@@ -58,7 +58,7 @@ class Buddy extends React.Component {
     return (
       <div>
         <NewPlantForm addPlant={this.addPlant}/>
-        <PlantList masterPlantList={this.state.masterPlantList}/>
+      <PlantList masterPlantList={this.state.masterPlantList} sayHello={this.sayHello}/>
       </div>
     );
   }

@@ -2,9 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function WaterButton(props) {
+
+  // function sayHello() {
+  //   console.log("hello");
+  // }
+
   return (
     <div>
-      <button onClick={() => {sayHello()}}>Water Plant</button>
+      <button onClick={() => {props.sayHello()}}>Water Plant</button>
     </div>
   );
 }
