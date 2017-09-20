@@ -13,7 +13,7 @@ function Plant(props){
       <p>Date Added: {props.timeAddedFormatted}</p>
       <p><strong>Last Watered: {props.lastWateringFormatted}</strong></p>
       <p><strong>Time Since Last Watering: {props.timeSinceLastWatering}</strong></p>
-    <WaterButton waterPlant={props.waterPlant}/>
+    <WaterButton waterPlant={props.waterPlant} plant={props.plant}/>
     </div>
   );
 }
