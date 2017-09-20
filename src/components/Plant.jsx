@@ -13,7 +13,7 @@ function Plant(props){
       <p>Date Added: {props.timeAddedFormatted}</p>
       <p><strong>Last Watered: {props.lastWateringFormatted}</strong></p>
       <p><strong>Time Since Last Watering: {props.timeSinceLastWatering}</strong></p>
-    <WaterButton sayHello={props.sayHello}/>
+    <WaterButton waterPlant={props.waterPlant}/>
     </div>
   );
 }
@@ -28,7 +28,7 @@ Plant.propTypes = {
   timeAddedFormatted: PropTypes.string,
   lastWateringFormatted: PropTypes.string,
   timeSinceLastWatering: PropTypes.string,
-  sayHello: PropTypes.func,
+  waterPlant: PropTypes.func,
 };
 
 export default Plant;

@@ -13,7 +13,7 @@ class Buddy extends React.Component {
     this.addPlant = this.addPlant.bind(this);
     this.updateTimeSinceLastWatering = this.updateTimeSinceLastWatering.bind(this);
     // this.waterPlant = this.waterPlant.bind(this);
-    this.sayHello = this.sayHello.bind(this);
+    this.waterPlant = this.waterPlant.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +27,7 @@ class Buddy extends React.Component {
     clearInterval(this.timeSinceLastWateringChecker);
   }
 
-  sayHello() {
+  waterPlant() {
     console.log("hello");
   }
 
@@ -58,7 +58,7 @@ class Buddy extends React.Component {
     return (
       <div>
         <NewPlantForm addPlant={this.addPlant}/>
-      <PlantList masterPlantList={this.state.masterPlantList} sayHello={this.sayHello}/>
+      <PlantList masterPlantList={this.state.masterPlantList} waterPlant={this.waterPlant}/>
       </div>
     );
   }
@@ -67,7 +67,7 @@ class Buddy extends React.Component {
 Buddy.propTypes = {
   addPlant: PropTypes.func,
   waterPlant: PropTypes.func,
-  sayHello: PropTypes.func,
+  waterPlant: PropTypes.func,
 };
 
 export default Buddy;

@@ -46,7 +46,7 @@ function PlantList(props){
         timeAddedFormatted={plant.timeAddedFormatted}
         lastWateringFormatted={plant.lastWateringFormatted}
         timeSinceLastWatering={plant.timeSinceLastWatering}
-        sayHello={props.sayHello}
+        waterPlant={props.waterPlant}
         key={index}/>
       )}
     </div>
@@ -56,7 +56,6 @@ function PlantList(props){
 PlantList.propTypes = {
   masterPlantList: PropTypes.array,
   waterPlant: PropTypes.func,
-  sayHello: PropTypes.func,
 };
 
 export default PlantList;

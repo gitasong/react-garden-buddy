@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 
 function WaterButton(props) {
 
-  // function sayHello() {
-  //   console.log("hello");
-  // }
+  function waterPlant() {
+    console.log("hello");
+  }
 
   return (
     <div>
-      <button onClick={() => {props.sayHello()}}>Water Plant</button>
+      <button onClick={() => {props.waterPlant()}}>Water Plant</button>
     </div>
   );
 }
 
 WaterButton.propTypes = {
-  sayHello: PropTypes.func,
+  waterPlant: PropTypes.func,
 };
 
 export default WaterButton;
