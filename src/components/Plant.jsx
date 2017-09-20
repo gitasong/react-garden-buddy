@@ -29,6 +29,7 @@ Plant.propTypes = {
   lastWateringFormatted: PropTypes.string,
   timeSinceLastWatering: PropTypes.string,
   waterPlant: PropTypes.func,
+  plant: PropTypes.any,
 };
 
 export default Plant;
