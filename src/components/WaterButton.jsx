@@ -9,7 +9,7 @@ function WaterButton(props) {
 
   return (
     <div>
-      <button onClick={() => {props.waterPlant()}}>Water Plant</button>
+      <button onClick={() => {props.waterPlant({props.plant})}}>Water Plant</button>
     </div>
   );
 }
