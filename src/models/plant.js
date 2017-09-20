@@ -9,12 +9,19 @@ class Plant {
     this.frequency = frequency;
     this.timeAdded = new Moment();
     this.timeAddedFormatted = new Moment().format("MMM Do YYYY");
-    this.timeSinceWatered = "a few seconds";
+    this.lastWatering = new Moment();
+    this.lastWateringFormatted = new Moment().format("MMM Do YYYY");
+    this.timeSinceLastWatering = this.setTimeSinceLastWatering();
   }
 
-  setTimeSinceWatered() {
-    this.timeSinceWatered = this.timeAdded.fromNow(true);
+  // setlastWatering() {
+  //   this.lastWatering = new Moment();
+  // }
+
+  setTimeSinceLastWatering() {
+    this.timeSinceLastWatering = this.lastWatering.fromNow(true);
   }
+
 }
 
 export default Plant;
