@@ -13,7 +13,7 @@ function Plant(props){
       <p>Date Added: {props.timeAddedFormatted}</p>
       <p><strong>Last Watered: {props.lastWateringFormatted}</strong></p>
       <p><strong>Time Since Last Watering: {props.timeSinceLastWatering}</strong></p>
-    <WaterButton waterPlant={props.waterPlant} plant={props.plant}/>
+    <WaterButton waterPlant={props.waterPlant} plant={props.plant} timeAdded={props.timeAdded}/>
     </div>
   );
 }
@@ -25,6 +25,7 @@ Plant.propTypes = {
   species: PropTypes.string.isRequired,
   category: PropTypes.string,
   frequency: PropTypes.number.isRequired,
+  timeAdded: PropTypes.string.isRequired,
   timeAddedFormatted: PropTypes.string,
   lastWateringFormatted: PropTypes.string,
   timeSinceLastWatering: PropTypes.string,

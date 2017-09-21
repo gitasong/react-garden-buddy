@@ -9,13 +9,14 @@ function WaterButton(props) {
 
   return (
     <div>
-      <button onClick={() => {props.waterPlant(props.plant)}}>Water Plant</button>
+      <button onClick={() => {props.waterPlant(props.timeAdded)}}>Water Plant</button>
     </div>
   );
 }
 
 WaterButton.propTypes = {
   waterPlant: PropTypes.func,
+  timeAdded: PropTypes.object,
 };
 
 export default WaterButton;
