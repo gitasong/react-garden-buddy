@@ -12,11 +12,12 @@ class Plant {
     this.lastWatering = new Moment();
     this.lastWateringFormatted = new Moment().format("MMM Do YYYY");
     this.timeSinceLastWatering = this.setTimeSinceLastWatering();
+    this.setLastWatering = this.setLastWatering();
   }
 
-  // setlastWatering() {
-  //   this.lastWatering = new Moment();
-  // }
+  setLastWatering() {
+    this.lastWatering = new Moment();
+  }
 
   setTimeSinceLastWatering() {
     this.timeSinceLastWatering = this.lastWatering.fromNow(true);
