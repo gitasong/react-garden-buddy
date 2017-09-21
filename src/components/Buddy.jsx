@@ -12,7 +12,6 @@ class Buddy extends React.Component {
     };
     this.addPlant = this.addPlant.bind(this);
     this.updateTimeSinceLastWatering = this.updateTimeSinceLastWatering.bind(this);
-    // this.waterPlant = this.waterPlant.bind(this);
     this.waterPlant = this.waterPlant.bind(this);
   }
 
@@ -27,10 +26,6 @@ class Buddy extends React.Component {
     clearInterval(this.timeSinceLastWateringChecker);
   }
 
-  waterPlant() {
-    console.log("hello");
-  }
-
   updateTimeSinceLastWatering() {
     console.log("check");
     let newMasterPlantList = this.state.masterPlantList.slice();
@@ -39,14 +34,20 @@ class Buddy extends React.Component {
     this.setState({masterPlantList: newMasterPlantList})
   }
 
-  // waterPlant(plantKey) {
-  //   console.log("water plant");
-  //   let newMasterPlantList = this.state.masterPlantList.slice();
-  //   newMasterPlantList[plantKey].setTimeSinceLastWatering;
-  //   console.log(newMasterPlantList[plantKey]);
-  //   console.log(newMasterPlantList.timeSinceLastWatering);
-  //   this.setState({masterPlantList: newMasterPlantList});
-  // }
+  waterPlant(plantKey) {
+    console.log("water plant");
+    // console.log(plantKey);
+    let newMasterPlantList = this.state.masterPlantList.slice();
+    newMasterPlantList.forEach(function(plant) {
+      // console.log(plant.timeAdded);
+      // debugger;
+      console.log(plant.timeAdded === plantKey);
+      if (plant.timeAdded === plantKey) {
+        plant.setLastWatering();
+      }
+    });
+    this.setState({masterPlantList: newMasterPlantList});
+  }
 
   addPlant(newPlant) {
     var newMasterPlantList = this.state.masterPlantList.slice();
@@ -66,7 +67,6 @@ class Buddy extends React.Component {
 
 Buddy.propTypes = {
   addPlant: PropTypes.func,
-  waterPlant: PropTypes.func,
   waterPlant: PropTypes.func,
 };
 
