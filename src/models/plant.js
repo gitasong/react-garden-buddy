@@ -8,9 +8,9 @@ class Plant {
     this.category = category;
     this.frequency = frequency;
     this.timeAdded = new Moment();
-    this.timeAddedFormatted = new Moment().format("MMM Do YYYY");
+    this.timeAddedFormatted = new Moment().format("MMM Do YYYY hh mm ss A");
     this.lastWatering = new Moment();
-    this.lastWateringFormatted = this.lastWatering.format("MMM Do YYYY");
+    this.lastWateringFormatted = this.lastWatering.format("MMM Do YYYY hh mm ss A");
     this.timeSinceLastWatering = this.setTimeSinceLastWatering();
     this.setLastWatering = this.setLastWatering();
   }
