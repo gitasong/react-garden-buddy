@@ -18,7 +18,7 @@ class Buddy extends React.Component {
   componentDidMount() {
     this.timeSinceLastWateringChecker = setInterval(() =>
       this.updateTimeSinceLastWatering(),
-      60000
+      5000
     );
   }
 
@@ -39,9 +39,9 @@ class Buddy extends React.Component {
     // console.log(plantKey);
     let newMasterPlantList = this.state.masterPlantList.slice();
     newMasterPlantList.forEach(function(plant) {
-      // console.log(plant.timeAdded);
+      console.log(plant);
       // debugger;
-      console.log(plant.timeAdded === plantKey);
+      // console.log(plant.timeAdded === plantKey);
       if (plant.timeAdded === plantKey) {
         plant.setLastWatering();
       }
