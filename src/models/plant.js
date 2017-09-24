@@ -10,7 +10,7 @@ class Plant {
     this.timeAdded = new Moment();
     this.timeAddedFormatted = new Moment().format("MMM Do YYYY");
     this.lastWatering = new Moment();
-    this.lastWateringFormatted = new Moment().format("MMM Do YYYY");
+    this.lastWateringFormatted = this.lastWatering.format("MMM Do YYYY");
     this.timeSinceLastWatering = this.setTimeSinceLastWatering();
     this.setLastWatering = this.setLastWatering();
   }
