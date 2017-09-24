@@ -3,10 +3,6 @@ import PropTypes from "prop-types";
 
 function WaterButton(props) {
 
-  function waterPlant() {
-    console.log("hello");
-  }
-
   return (
     <div>
       <button onClick={() => {props.waterPlant(props.timeAdded)}}>Water Plant</button>
@@ -16,7 +12,7 @@ function WaterButton(props) {
 
 WaterButton.propTypes = {
   waterPlant: PropTypes.func,
-  timeAdded: PropTypes.object,
+  timeAdded: PropTypes.object.isRequired,
 };
 
 export default WaterButton;
